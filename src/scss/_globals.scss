@@ -1,0 +1,22 @@
+
+$c-white: #FFFFFF;
+$c-accentRed: #F0145A;
+$bg-linear: linear-gradient(#323264, #323264, #7A425E);
+$f-regular: "TTNormsRegular";
+$f-medium: "TTNormsMedium";
+$f-bold: "TTNormsBold"; 
+
+@mixin font($fw, $fsz, $lh) {
+    @if $fw == 400 {
+        font-family: $f-regular;
+    }
+    @else if $fw == 500 {
+        font-family: $f-medium;
+    }
+    @else if $fw == 700 {
+        font-family: $f-bold;
+    }
+    font-size: $fsz + px;
+    line-height: calc($lh / $fsz * 100%);
+    
+}
