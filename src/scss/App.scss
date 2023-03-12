@@ -1,5 +1,6 @@
 @import "./globals";
 @import "./fonts";
+@import "../components/Header/Header";
 *,
 *::before,
 *::after {
@@ -46,4 +47,8 @@ body {
 ._container {
   max-width: 1320px;
   margin: 0 auto;
+}
+.advertising {
+  background: $bg-linear;
+  color: $c-white;
 }

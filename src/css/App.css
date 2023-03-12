@@ -14,6 +14,121 @@
   src: url("../font/TTNorms-Bold.eot"); /* Для IE5-8 */
   src: url("../font/TTNorms-Bold.ttf") format("truetype"); /* Для остальных браузеров */
 }
+.header {
+  padding-top: 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left-link {
+  display: flex;
+  flex-flow: column wrap;
+}
+.header__left-title {
+  position: relative;
+}
+.header__left-title .title-header_main {
+  font-family: "TTNormsBold";
+  font-size: 56px;
+  line-height: 121.4285714286%;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+.header__left-title .title-header_main::first-letter {
+  color: #F0145A;
+}
+.header__left-title .title-header_addition {
+  font-family: "TTNormsRegular";
+  font-size: 56px;
+  line-height: 121.4285714286%;
+  display: inline-block;
+}
+.header__left-title .title-header_addition::first-letter {
+  color: #F0145A;
+  font-family: "TTNormsBold";
+  font-size: 56px;
+  line-height: 121.4285714286%;
+}
+.header__left-caption {
+  font-family: "TTNormsBold";
+  font-size: 20px;
+  line-height: 140%;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+.header .top-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .top-header > *:not(:first-child) {
+  margin-left: 20px;
+}
+.header .top-header_language {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .top-header_language > *:not(:first-child) {
+  margin-left: 10px;
+}
+.header .top-header_input {
+  display: none;
+}
+.header .top-header_text {
+  font-family: "TTNormsBold";
+  font-size: 12px;
+  line-height: 116.6666666667%;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.header .top-header_text.active {
+  background-color: #F0145A;
+}
+.header .top-header_text:hover {
+  background-color: #EDEDF7;
+  color: #B3B3BA;
+}
+.header .top-header_adress {
+  color: inherit;
+  font-family: "TTNormsRegular";
+  font-size: 16px;
+  line-height: 118.75%;
+  text-align: right;
+}
+.header .top-header_link {
+  color: inherit;
+  font-family: "TTNormsBold";
+  font-size: 16px;
+  line-height: 118.75%;
+  text-align: right;
+}
+.header .top-header_icon:hover {
+  color: #24A3FF;
+}
+.header .bottom-header_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 16px;
+}
+.header .bottom-header_list > *:not(:first-child) {
+  margin-left: 16px;
+}
+.header .bottom-header_link {
+  font-family: "TTNormsBold";
+  font-size: 18px;
+  line-height: 116.6666666667%;
+  text-align: right;
+}
+.header .bottom-header_link:hover {
+  color: #F0145A;
+}
+
 *,
 *::before,
 *::after {
@@ -67,4 +182,9 @@ body {
 ._container {
   max-width: 1320px;
   margin: 0 auto;
+}
+
+.advertising {
+  background: linear-gradient(#323264, #323264, #7A425E);
+  color: #FFFFFF;
 }

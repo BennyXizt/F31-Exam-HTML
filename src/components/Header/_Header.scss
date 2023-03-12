@@ -1,0 +1,131 @@
+@import "../../scss/globals";
+
+.header {
+    padding-top: 49px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        &-link {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+
+        &-title {
+            position: relative;
+            & .title-header_main {
+                @include font(700, 56, 68);
+                display: inline-block;
+                letter-spacing: 2px;
+
+                &::first-letter {
+                    color: $c-accent-red;
+                }
+            }
+            & .title-header_addition {
+                @include font(400, 56, 68);
+                display: inline-block;
+
+                &::first-letter {
+                    color: $c-accent-red;
+                    @include font(700, 56, 68);
+                }
+            }
+        }
+
+        &-caption {
+            @include font(700, 20, 28);
+            display: inline-block;
+            letter-spacing: 1px;
+
+        }
+    }
+
+
+
+    .top-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &>*:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        &_language {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &>*:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+
+        &_input {
+            display: none;
+        }
+
+        &_text {
+            @include font(700, 12, 14);
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &.active {
+                background-color: $c-accent-red;
+            }
+
+            &:hover {
+                background-color: $c-gray-alt;
+                color: $c-gray;
+            }
+        }
+
+        &_adress {
+            color: inherit;
+            @include font(400, 16, 19);
+            text-align: right;
+        }
+
+        &_link {
+            color: inherit;
+            @include font(700, 16, 19);
+            text-align: right;
+        }
+
+        &_icon {
+            &:hover {
+                color: $c-active-blue;
+            }
+        }
+    }
+
+    .bottom-header {
+
+        &_list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 16px;
+
+            &>*:not(:first-child) {
+                margin-left: 16px;
+            }
+        }
+
+        &_link {
+            @include font(700, 18, 21);
+            text-align: right;
+
+            &:hover {
+                color: $c-accent-red;
+            }
+        }
+    }
+}
