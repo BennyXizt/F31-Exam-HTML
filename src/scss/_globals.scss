@@ -3,9 +3,17 @@ $c-white: #FFFFFF;
 $c-accent-red: #F0145A;
 $c-gray-alt: #EDEDF7;
 $c-gray: #B3B3BA;
+$c-gray-separator: #E6E6F0;
 $c-active-blue: #24A3FF;
 $c-main: #323264;
-$bg-linear: linear-gradient(#323264, #323264, #7A425E);
+$c-gray-light: #CACADB;
+$c-gray-lighter: #E7E7F2;
+$c-gray-bg: #F5F5FA;
+
+$bg-linear: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$bg-linear-reverse: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+$bg-linear-alt: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$bg-linear-red: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 
 $a-tablet: 1024px;
 $a-tablet-small: 768px;
@@ -28,4 +36,33 @@ $f-bold: "TTNormsBold";
     font-size: $fsz + px;
     line-height: calc($lh / $fsz * 100%);
     
+}
+
+._link {
+    @include font(700, 14, 17);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    position: relative;
+
+    &::after {
+        content: ">";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        right: -20.5px;
+        transform: translate(0, -50%);
+    }
+}
+
+._title {
+    @include font(700, 42, 50);
+    background-image: $bg-linear-red;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &::first-letter {
+        text-transform: capitalize;
+    }
 }

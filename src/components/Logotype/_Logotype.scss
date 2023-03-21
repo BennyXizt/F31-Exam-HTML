@@ -1,0 +1,22 @@
+@import "../../scss/globals";
+
+.logotype {
+    margin-top: 63px;
+    position: relative;
+  
+    &__container {
+      height: 680px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center 130px, center center;
+      background-size: contain;
+    }
+  
+    &__title {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      @include font(500, 38, 46);
+      text-align: center;
+    }
+  }

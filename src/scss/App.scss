@@ -1,6 +1,12 @@
 @import "./globals";
 @import "./fonts";
 @import "../components/Header/Header";
+@import "../components/Logotype/Logotype";
+@import "../components/Experience/Experience";
+@import "../components/Services/Services";
+@import "../components/Team/Team";
+@import "../components/Carousel/Carousel";
+
 *,
 *::before,
 *::after {
@@ -9,18 +15,22 @@
   border: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 ul,
 ol,
 li {
   list-style: none;
 }
+
 img {
   vertical-align: top;
 }
+
 h1,
 h2,
 h3,
@@ -30,6 +40,7 @@ h6 {
   font-weight: inherit;
   font-size: inherit;
 }
+
 html,
 body {
   height: 100%;
@@ -39,16 +50,43 @@ body {
   color: #000;
   font-family: $f-regular, sans-serif;
 }
+
 #root {
   min-height: 100%;
   overflow: hidden;
   position: relative;
 }
+
 ._container {
   max-width: 1320px;
   margin: 0 auto;
 }
+
 .advertising {
-  background: $bg-linear;
+  background: $bg-linear, url("../../public/background/shade.png") repeat-x center / cover;
   color: $c-white;
+  position: relative;
+
+
+  &::before, &::after {
+    content: "";
+    border-radius: 0px 0px 12px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 10px;
+    transform: translate(-50%, 0);
+    
+  }
+  &::before {
+    background: $c-gray-light;
+    bottom: -10px;
+    width: calc(1400 * 100% / 1440);
+  }
+  &::after {
+    background: $c-gray-lighter;
+    bottom: -20px;
+    width: calc(1360 * 100% / 1440);
+  }
+
 }

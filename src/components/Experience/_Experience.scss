@@ -1,0 +1,47 @@
+@import "../../scss/globals";
+
+.experience {
+    margin-top: 80px;
+   
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    &__item {
+        @include font(700, 42, 50);
+        text-align: right;
+        color: $c-gray;
+        text-transform: capitalize;
+        border-right: 4px solid $c-gray-separator;
+        padding: 20px 40px 20px 0;
+
+        &.active {
+            background: $bg-linear-reverse no-repeat center center / cover;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-right: 4px solid $c-accent-red;
+        }
+    }
+
+    &__definition {
+        margin-left: 40px;
+        max-width: 600px;
+
+        & > *:not(:first-child) {
+            margin-top: 20px;
+        }
+        &__title {
+            @include font(500, 32, 38);
+            
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+        &__item {
+            @include font(400, 21, 30);
+        }
+    }
+
+}

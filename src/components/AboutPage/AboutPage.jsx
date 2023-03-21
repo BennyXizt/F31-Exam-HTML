@@ -8,7 +8,7 @@ function AboutPage(props) {
           <section className="advertising">
             <div className="advertising__container _container">
               <Header
-                text={props.text}
+                text={props.text.header}
                 languages={props.languages}
                 curLang={props.currLang}
                 setLanguage={props.setLanguage}
