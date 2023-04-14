@@ -13,7 +13,7 @@
     .list-service {
         padding: 68px 0 56px 0;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
         gap: 40px;
         
         &_figure {

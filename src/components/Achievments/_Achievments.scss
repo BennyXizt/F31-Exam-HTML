@@ -1,0 +1,31 @@
+
+.achievments {
+    background-color: $c-gray-bg;
+    padding-top: 28px;
+    padding-bottom: 30px;
+
+    &__title {
+        color: $c-main;
+        @include font(700, 14, 17);
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        margin-top: 30px;
+        flex: 0 0 1320px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__elem {
+        flex: 0 0 300px;
+        background-color: $c-white;
+        text-align: center;
+        padding: 24px 0;
+    }
+
+
+}

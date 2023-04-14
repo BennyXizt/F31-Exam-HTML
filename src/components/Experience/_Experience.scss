@@ -44,4 +44,11 @@
         }
     }
 
+    @media (max-width: $a-tablet) {
+        &__container {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
 }

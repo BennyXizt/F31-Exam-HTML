@@ -30,8 +30,8 @@ function Experience(props) {
           })}
         </ul>
         <dl className="experience__definition">
-            <dt className="experience__definition__title">{props.definition.title[sliderIndex]}</dt>
-            <dd className="experience__definition__item">{props.definition.list[sliderIndex]}</dd>
+            <dt className="experience__definition__title">{props.definition[sliderIndex].title}</dt>
+            <dd className="experience__definition__item">{props.definition[sliderIndex].article}</dd>
         </dl>
       </div>
     </section>

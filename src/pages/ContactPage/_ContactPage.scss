@@ -1,0 +1,98 @@
+.contact {
+    margin-top: 80px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        flex: 0 1 414px;
+        display: flex;
+        flex-flow: column wrap;
+
+        &-link {
+            margin-left: 10px;
+            @include font(700, 12, 16);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        &-item {
+            display: flex;
+            flex-flow: column wrap;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+
+            &>*:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+
+        &-text {
+            @include font(400, 21, 30);
+            color: $c-main;
+            text-align: left;
+
+            &._active {
+                color: $c-active-blue;
+            }
+        }
+
+        &-separator {
+            margin-top: 20px;
+        }
+    }
+
+    &__right {
+        background-color: $c-gray-bg;
+        padding: 20px 20px 90px;
+        flex: 0 0 527px;
+        display: flex;
+        flex-flow: column wrap;
+        position: relative;
+
+        & > * {
+            &:not(:first-child) {
+                margin-top: 20px;
+                padding: 10px;
+            }
+            &::placeholder {
+                @include font(400, 18, 26);
+                color: $c-gray;
+            }
+        }
+
+        &-title {
+            @include font(700, 32, 38);
+        }
+
+        label {
+            @include font(700, 14, 17);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $c-gray;
+        }
+        textarea {
+            height: 180px;
+        }
+        &-btn {
+            bottom: 20px;
+            width: 250px;
+        }
+
+    }
+
+    &__map {
+        margin-top: 80px;
+        width: 100vw;
+
+        & img {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+}

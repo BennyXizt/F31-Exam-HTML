@@ -1,0 +1,54 @@
+
+.introduction {
+    margin-top: 80px;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        flex: 0 1 60%;
+    }
+
+    &__right {
+        flex: 0 1 40%;
+    }
+
+    &__text {
+        @include font(400, 21, 30);
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    &__right {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        border-left: 4px solid $c-gray-separator;
+        padding-left: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__figure {
+        flex: 0 1 32px;
+        color: $c-accent-red;
+    }
+
+    &__subtitle {
+        @include font(700, 36, 43);
+        flex: 1 1 auto;
+    }
+
+    &__advertice {
+        flex: 0 1 100%;
+        @include font(400, 18, 22);
+        color: $c-main;
+    }
+}

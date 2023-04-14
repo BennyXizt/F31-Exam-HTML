@@ -2,8 +2,12 @@ import "./css/App.css";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import AboutPage from "./components/AboutPage/AboutPage";
-import HomePage from "./components/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import HomePage from "./pages/HomePage/HomePage";
+import ServicePage from "./pages/ServicePage/ServicePage";
+import TeamPage from "./pages/TeamPage/TeamPage";
+import PublicationPage from "./pages/PublicationPage/PublicationPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   let [currLang, setCurrLang] = useState("ру");
@@ -24,6 +28,48 @@ function App() {
     "/team/team5.png",
     "/team/team6.png",
   ];
+  let clientImages = [
+    "/clients/logo1.png",
+    "/clients/logo2.png",
+    "/clients/logo3.png",
+    "/clients/logo4.png",
+    "/clients/logo5.png",
+    "/clients/logo6.png",
+    "/clients/logo7.png",
+    "/clients/logo8.png",
+    "/clients/logo9.png",
+    "/clients/logo10.png",
+    "/clients/logo11.png",
+    "/clients/logo12.png",
+  ];
+  let clientColor = [
+    { backgroundColor: "#1C4280" },
+    { backgroundColor: "#143646" },
+    { backgroundColor: "#F48B30" },
+    { backgroundColor: "#9E4DC3" },
+    { backgroundColor: "#FD9339" },
+    { backgroundColor: "#E2E2E4" },
+    { backgroundColor: "#C71C36" },
+    { backgroundColor: "#DCF3F9" },
+    { backgroundColor: "#EAEAEA" },
+    { backgroundColor: "#282240" },
+    { backgroundColor: "#1D4568" },
+    { backgroundColor: "#000000" },
+  ];
+  let publicationImage = [
+    "",
+    "/publications/p1.png",
+    "/publications/p2.png",
+    "/publications/p3.png",
+    "/publications/p4.png",
+    "/publications/p5.png",
+  ];
+  let achievmentsImage = [
+    "/achievments/image.png",
+    "/achievments/image2.png",
+    "/achievments/image3.png",
+    "/achievments/image4.png",
+  ];
   let translatedText = {
     ру: {
       header: {
@@ -41,20 +87,29 @@ function App() {
           "инновационные",
           "бизнес-ориентированные юристы",
         ],
-        definition: {
-          title: [
-            "переворачиваем представление о юридических услугах",
-            "клиентоориентированность - наша страсть!",
-            "наша юридическая компания - настоящий пенсионер в инновациях!",
-            "выходите за рамки стандартных услуг",
-          ],
-          list: [
-            "Консолидируя многолетний опыт и практику, юристы компании сопровождают сложные проекты и добиваются принятия ряда важных для отрасли решений. Многие формируют практику применения морского права в Украине.",
-            "Мы превращаем сложные юридические процессы в удобные и понятные для наших клиентов, стремясь всегда оказать им максимальную поддержку и помощь в решении их проблем. Мы ценим каждого клиента и всегда готовы выйти за рамки стандартных услуг, чтобы обеспечить индивидуальный подход к каждому случаю.",
-            "Мы с головой погружены в мир новых технологий и всегда стремимся применять самые передовые методы работы для максимальной эффективности и удобства наших клиентов. Мы не боимся экспериментировать и искать нестандартные решения для сложных задач.",
-            "У нас вы найдете команду опытных юристов, которые знают, как защитить интересы вашего бизнеса и помочь вам принимать взвешенные решения. Мы готовы стать вашим надежным партнером и помочь вам достичь успеха в бизнесе!",
-          ],
-        },
+        definition: [
+          {
+            title: "переворачиваем представление о юридических услугах",
+            article: `Консолидируя многолетний опыт и практику, юристы компании сопровождают сложные проекты и добиваются принятия ряда важных для отрасли решений. Многие формируют практику применения морского права в Украине.
+              Prolegals – надежный бизнес-партнер, подтверждаемый стабильным сотрудничеством с международными юридическими фирмами, доверием крупных украинских и международных компаний, признанием профессиональных рейтингов.`,
+          },
+          {
+            title: "качество - это то, о чем мы заботимся больше всего.",
+            article:
+              "Исторически неизменная юридическая профессия начала переформатироваться в последние годы. Клиенты это ощущают, но юридические компании все еще сопротивляются эволюции. Клиенты нуждаются в удобстве, простоте, прозрачной оплате. Google, IBM WatsOn, Symantec Clearwell доказывают, что технологическая революция в юридических услугах началась и стала неизбежной. Качество - это то, о чем мы заботимся больше всего. Всё просто. Если вы недовольны нашей работой, мы вернем деньги. Мы доверяем нашим клиентам. И мы хотим, чтобы клиенты нам тоже доверяли.",
+          },
+          {
+            title:
+              "наша юридическая компания - настоящий пенсионер в инновациях!",
+            article:
+              "Мы с головой погружены в мир новых технологий и всегда стремимся применять самые передовые методы работы для максимальной эффективности и удобства наших клиентов. Мы не боимся экспериментировать и искать нестандартные решения для сложных задач.",
+          },
+          {
+            title: "выходите за рамки стандартных услуг",
+            article:
+              "У нас вы найдете команду опытных юристов, которые знают, как защитить интересы вашего бизнеса и помочь вам принимать взвешенные решения. Мы готовы стать вашим надежным партнером и помочь вам достичь успеха в бизнесе!",
+          },
+        ],
       },
       service: {
         upper: "услуги",
@@ -104,6 +159,102 @@ function App() {
           "Менеджер",
           "Стажёр",
         ],
+      },
+      cases: {
+        upper: "успешные кейсы",
+        list: [
+          {
+            title:
+              "Подготовка комплексного юридического заключения для европейского банка",
+            company: "WannaBiz",
+          },
+          {
+            title:
+              "Сопровождение проекта по купле-продаже сельскохозяйственной продукции",
+            company: "tapgerine",
+          },
+          {
+            title:
+              "Сопровождение проекта по купле-продаже сельскохозяйственной продукции",
+            company: "Hillel IT School",
+          },
+          {
+            title:
+              "Представительство интересов крупного зернотрейдера в налоговом споре",
+            company: "3D LOOK",
+          },
+          {
+            title: "Обжалование налоговых уведомлений-решений ГФС",
+            company: "adtelligent",
+          },
+          {
+            title:
+              "Сопровождение проекта по кредитованию агротрейдеров мальтийским банком",
+            company: "Clikky",
+          },
+        ],
+      },
+      clients: {
+        title: "уже доверяют нам",
+      },
+      publications: {
+        upper: "публикации",
+        title: "нам есть что рассказать",
+        button: "еще публикации",
+        list: [
+          {
+            title: "Валютный контроль умер, да здравствует валютный контроль!",
+            date: "14 июня",
+            article:
+              "Эксперты проводят конференции, круглые столы и другие мероприятия на тему «либерализация валютного законодательства». Юристы-эксперты-новеллисты стирают пальцы о «ctrl+c/ctrl+v».",
+          },
+          {
+            title: "Ассоциированный акционер",
+            date: "22 апреля",
+            article:
+              "На проектах я – джун. При этом я совладелец юридической фирмы. Как это вышло. Перед вступлением родители мне говорили, что если буду...",
+          },
+          {
+            title:
+              "Штраф для «Корпорации добра»: что будет с Google и другими за нарушение GDPR",
+            date: "29 сентября",
+            article:
+              "И почему взыскание в 50 млн евро может стать судьбоносным прецедентом? По материалам Mind.ua 21 января Национальная комиссия по защите данных.",
+          },
+          {
+            title: "Завещание миллениала",
+            date: "19 августа",
+            article:
+              "Что и как будут передавать по наследству современные влоггеры, опинион лидеры и криптомиллионеры Типичное наследие украинского поколения Х выглядит так: квартира у…",
+          },
+          {
+            title: "Закон о языках: как сделать свой сайт подходящим",
+            date: "date",
+            article: "article",
+          },
+          {
+            title: "title",
+            date: "date",
+            article: "article",
+          },
+        ],
+      },
+      footer: {
+        adress: "Одесса, Адмиральський пр., 3",
+        map: "посмотреть на карте",
+        trademark: "ООО Юридическая компания",
+      },
+      introduction: {
+        list: [
+          "лет релевантного опыта",
+          "активных клиентов, которые доверяют нам свои поручения ежемесячно",
+          "часов работы «pro bono» ежегодно",
+        ],
+      },
+      backgroundImage: "команда",
+      achievments: "достижения",
+      publicationsEntry: {
+        switcher: ["новости", "компания"],
       },
     },
     en: {
@@ -160,6 +311,9 @@ function App() {
               links={translatedText["en"].header.list}
               serviceImages={serviceImages}
               teamImages={teamImages}
+              clientImages={clientImages}
+              clientColor={clientColor}
+              publicationImage={publicationImage}
             />
           }
         />
@@ -167,6 +321,60 @@ function App() {
           path="/about"
           element={
             <AboutPage
+              text={translatedText[currLang]}
+              languages={languages}
+              currLang={currLang}
+              setLanguage={setCurrentLanguage}
+              links={translatedText["en"].header.list}
+              achievmentsImage={achievmentsImage}
+            />
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <ServicePage
+              text={translatedText[currLang]}
+              languages={languages}
+              currLang={currLang}
+              setLanguage={setCurrentLanguage}
+              links={translatedText["en"].header.list}
+              serviceImages={serviceImages}
+              clientImages={clientImages}
+              clientColor={clientColor}
+            />
+          }
+        />
+        <Route
+          path="/team"
+          element={
+            <TeamPage
+              text={translatedText[currLang]}
+              languages={languages}
+              currLang={currLang}
+              setLanguage={setCurrentLanguage}
+              links={translatedText["en"].header.list}
+              teamImages={teamImages}
+            />
+          }
+        />
+        <Route
+          path="/publications"
+          element={
+            <PublicationPage
+              text={translatedText[currLang]}
+              languages={languages}
+              currLang={currLang}
+              setLanguage={setCurrentLanguage}
+              links={translatedText["en"].header.list}
+              publicationImage={publicationImage}
+            />
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ContactPage
               text={translatedText[currLang]}
               languages={languages}
               currLang={currLang}
