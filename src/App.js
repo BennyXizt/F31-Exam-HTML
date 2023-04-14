@@ -13,34 +13,34 @@ function App() {
   let [currLang, setCurrLang] = useState("ру");
   let [languages, setLanguages] = useState(["ру", "en"]);
   let serviceImages = [
-    "/services/shopping-bag.svg",
-    "/services/work-bag.svg",
-    "/services/corona.svg",
-    "/services/collaboration.svg",
-    "/services/shield.svg",
-    "/services/judgement.svg",
+    "/F31-Exam-HTML/services/shopping-bag.svg",
+    "/F31-Exam-HTML/services/work-bag.svg",
+    "/F31-Exam-HTML/services/corona.svg",
+    "/F31-Exam-HTML/services/collaboration.svg",
+    "/F31-Exam-HTML/services/shield.svg",
+    "/F31-Exam-HTML/services/judgement.svg",
   ];
   let teamImages = [
-    "/team/team1.png",
-    "/team/team2.png",
-    "/team/team3.png",
-    "/team/team4.png",
-    "/team/team5.png",
-    "/team/team6.png",
+    "/F31-Exam-HTML/team/team1.png",
+    "/F31-Exam-HTML/team/team2.png",
+    "/F31-Exam-HTML/team/team3.png",
+    "/F31-Exam-HTML/team/team4.png",
+    "/F31-Exam-HTML/team/team5.png",
+    "/F31-Exam-HTML/team/team6.png",
   ];
   let clientImages = [
-    "/clients/logo1.png",
-    "/clients/logo2.png",
-    "/clients/logo3.png",
-    "/clients/logo4.png",
-    "/clients/logo5.png",
-    "/clients/logo6.png",
-    "/clients/logo7.png",
-    "/clients/logo8.png",
-    "/clients/logo9.png",
-    "/clients/logo10.png",
-    "/clients/logo11.png",
-    "/clients/logo12.png",
+    "/F31-Exam-HTML/clients/logo1.png",
+    "/F31-Exam-HTML/clients/logo2.png",
+    "/F31-Exam-HTML/clients/logo3.png",
+    "/F31-Exam-HTML/clients/logo4.png",
+    "/F31-Exam-HTML/clients/logo5.png",
+    "/F31-Exam-HTML/clients/logo6.png",
+    "/F31-Exam-HTML/clients/logo7.png",
+    "/F31-Exam-HTML/clients/logo8.png",
+    "/F31-Exam-HTML/clients/logo9.png",
+    "/F31-Exam-HTML/clients/logo10.png",
+    "/F31-Exam-HTML/clients/logo11.png",
+    "/F31-Exam-HTML/clients/logo12.png",
   ];
   let clientColor = [
     { backgroundColor: "#1C4280" },
@@ -58,17 +58,17 @@ function App() {
   ];
   let publicationImage = [
     "",
-    "/publications/p1.png",
-    "/publications/p2.png",
-    "/publications/p3.png",
-    "/publications/p4.png",
-    "/publications/p5.png",
+    "/F31-Exam-HTML/publications/p1.png",
+    "/F31-Exam-HTML/publications/p2.png",
+    "/F31-Exam-HTML/publications/p3.png",
+    "/F31-Exam-HTML/publications/p4.png",
+    "/F31-Exam-HTML/publications/p5.png",
   ];
   let achievmentsImage = [
-    "/achievments/image.png",
-    "/achievments/image2.png",
-    "/achievments/image3.png",
-    "/achievments/image4.png",
+    "/F31-Exam-HTML/achievments/image.png",
+    "/F31-Exam-HTML/achievments/image2.png",
+    "/F31-Exam-HTML/achievments/image3.png",
+    "/F31-Exam-HTML/achievments/image4.png",
   ];
   let translatedText = {
     ру: {
