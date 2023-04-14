@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/F31-Exam-HTML/static/css/main.35b16b0d.css",
+    "main.js": "/F31-Exam-HTML/static/js/main.29723a8a.js",
+    "static/media/TTNorms-Regular.eot": "/F31-Exam-HTML/static/media/TTNorms-Regular.6af004b47b8437361f78.eot",
+    "static/media/TTNorms-Regular.ttf": "/F31-Exam-HTML/static/media/TTNorms-Regular.7281703a3e7aec14a6d2.ttf",
+    "static/media/TTNorms-Bold.eot": "/F31-Exam-HTML/static/media/TTNorms-Bold.f293f0fc435fa6fd985e.eot",
+    "static/media/TTNorms-Medium.eot": "/F31-Exam-HTML/static/media/TTNorms-Medium.e124f5aa8fdb56d031b6.eot",
+    "static/media/TTNorms-Bold.ttf": "/F31-Exam-HTML/static/media/TTNorms-Bold.e457a6b5c0040678c95a.ttf",
+    "static/media/TTNorms-Medium.ttf": "/F31-Exam-HTML/static/media/TTNorms-Medium.6c3a2aacb77786ebcbc8.ttf",
+    "static/media/shade.png": "/F31-Exam-HTML/static/media/shade.9ca925dccf68bcc52d76.png",
+    "index.html": "/F31-Exam-HTML/index.html",
+    "main.35b16b0d.css.map": "/F31-Exam-HTML/static/css/main.35b16b0d.css.map",
+    "main.29723a8a.js.map": "/F31-Exam-HTML/static/js/main.29723a8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35b16b0d.css",
+    "static/js/main.29723a8a.js"
+  ]
+}
